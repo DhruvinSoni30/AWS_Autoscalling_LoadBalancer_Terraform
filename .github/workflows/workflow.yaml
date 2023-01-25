@@ -21,26 +21,22 @@ jobs:
       - name: Set up Terraform
         uses: hashicorp/setup-terraform@v1
       
-      - name: Changing Directory
-        id: cd
-        run: cd prod/
-      
       - name: Terraform Validate
         id: validate
-        run: terraform validate
+        run: cd prod/ && terraform validate
         
       - name: Terraform Format
         id: format
-        run: terraform fmt
+        run: cd prod/ && terraform fmt
         
       - name: Terraform Init
         id: init
-        run: terraform init
+        run: cd prod/ && terraform init
       
       - name: Terraform Plan
         id: plan
-        run: terraform plan
+        run: cd prod/ && terraform plan
       
       - name: Terraform Apply
         id: apply
-        run: terraform apply --auto-approve
+        run: cd prod/ && terraform apply --auto-approve
