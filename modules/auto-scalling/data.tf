@@ -1,3 +1,3 @@
 data "template_file" "user_data" {
-    template = file("container.sh")
+    template = file("./container.sh")
 }
