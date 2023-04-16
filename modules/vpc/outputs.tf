@@ -13,3 +13,11 @@ output "public_subnet_az2_id" {
 output "internet_gateway" {
   value = aws_internet_gateway.internet_gateway.id
 }
+
+output "project_name" {
+  value = var.project_name
+}
+
+output "region" {
+  value = var.region
+}
